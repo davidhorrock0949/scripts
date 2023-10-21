@@ -1,4 +1,13 @@
 #!/usr/bin/python3
+
+#To generate the initial listing of files, use this:
+#rclone lsf --fast-list -R --csv --format pst <myremote>: > outputfile.csv
+#Then search it by using:
+#./gsearch.py -s <searchitem>
+#The first time you run it with -s it will ask you for the path to the CSV file
+#and import it into the database.
+
+
 import sqlite3
 import os
 import csv
