@@ -125,8 +125,6 @@ def search_database(search_texts=None, before_date=None, after_date=None, days_o
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Search a database using specific criteria.')
-#    parser.add_argument('-s', '--search', required=False, help='Text to search for in the database.')
-#    parser.add_argument('-s', '--search', nargs='*', required=False, help='List of keywords to search for in the database.')
     parser.add_argument('-s', '--search', type=str, required=False, help='Comma-separated list of keywords to search for in the database.')
     parser.add_argument('--before', type=str, help='Filter results before this date (YYYY-MM-DD format).')
     parser.add_argument('--after', type=str, help='Filter results after this date (YYYY-MM-DD format).')
