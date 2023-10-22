@@ -144,10 +144,9 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    setup_database()
-
     if not os.path.exists(DB_NAME):
         filename = input("Enter the path to the CSV file: ")
+        setup_database()
         import_csv_to_database(filename)
     
     search_database(args.search, args.before, args.after, args.daysold, args.sort, args.truncate, args.minsize)
